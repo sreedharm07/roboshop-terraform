@@ -60,7 +60,7 @@ resource "aws_instance" "redis" {
 
 resource "aws_route53_record" "redis" {
   zone_id = "Z07380001ED1GOXY0KMLD"
-  name    = "redis-devcloudev7.online"
+  name    = "redis-dev.cloudev7.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.redis.private_ip]
