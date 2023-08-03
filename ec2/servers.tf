@@ -114,7 +114,7 @@ resource "aws_route53_record" "mysql" {
   zone_id = "Z07380001ED1GOXY0KMLD"
   name    = "mysql-dev.cloudev7.online"
   type    = "A"
-  ttl     = 300
+  ttl     = 30
   records = [aws_instance.mysql.private_ip]
 }
 
@@ -179,6 +179,6 @@ resource "aws_route53_record" "dispatch" {
   zone_id = "Z07380001ED1GOXY0KMLD"
   name    = "dispatch-dev.cloudev7.online"
   type    = "A"
-  ttl     = 300
+  ttl     = 30
   records = [aws_instance.dispatch.private_ip]
 }
