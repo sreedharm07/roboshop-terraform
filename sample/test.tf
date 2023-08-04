@@ -1,21 +1,21 @@
-#variable "plan"{
-#  default = "sridhar"
-#}
-#
-#variable "list" {
-#  default = [100, 200]
-#}
+variable "plan"{
+  default = "sridhar"
+}
 
-#variable "maps" {
-#  default = {
-#    sridhar = "man"
-#    vish = "women"
-#  }
-#}
-#
-#output "output" {
-#  value = var.maps
-#}
+variable "list" {
+  default = [100, 200]
+}
+
+variable "maps" {
+  default = {
+    sridhar = "man"
+    vish = "women"
+  }
+}
+
+output "output" {
+  value = var.maps
+}
 
 variable "mapsofmaps" {
   default = {
@@ -27,3 +27,4 @@ variable "mapsofmaps" {
 output "test" {
   value = "prmm= ${var.mapsofmaps["sridhar"].crh}-here"
 }
+
