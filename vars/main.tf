@@ -50,3 +50,4 @@ output "details" {
 
 output "otherstring" {
   value = " name = ${ var.mapsofmass["sridhar"].school } "
+}
