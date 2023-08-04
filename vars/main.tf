@@ -45,6 +45,6 @@ variable "mapsofmass" {
 }
 
 output "details" {
-  value = var.mapsofmass
+  value = var.mapsofmass["sridhar"].school
 }
 
