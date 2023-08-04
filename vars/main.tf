@@ -48,3 +48,5 @@ output "details" {
   value = var.mapsofmass["sridhar"].school
 }
 
+output "otherstring" {
+  value = " name = ${ var.mapsofmass["sridhar"].school } "
