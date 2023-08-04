@@ -20,7 +20,7 @@ resource "aws_instance" "instances" {
 
   for_each= var.components
 tags = {
-    Name = lookup(each.key,each.key, null)
+    Name = lookup(each.value,each.key, null)
   }
 }
 
