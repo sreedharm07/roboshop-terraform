@@ -1,6 +1,6 @@
 variable  "components" {
   default = {
-    frontend    = {name = "frontens-dev"}
+    frontene    = {name = "frontens-dev"}
     mongodb     = {name = "mongodb-dev"}
     catalogue   =  "catalogue-dev"
 #      redis     = {name = "redis-dev"}
@@ -20,7 +20,8 @@ resource "aws_instance" "instances" {
 
   for_each= var.components
 tags = {
-    Name = lookup(each.value, key, null)
+    Name = each.key
+#   lookup(each.value,"name", null )
   }
 }
 
