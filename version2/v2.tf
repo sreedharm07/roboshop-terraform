@@ -31,7 +31,7 @@ resource "aws_route53_record" "records" {
   name    = "${lookup(each.value,"name", null)}.cloudev7.online"
   type    = "A"
   ttl     = 30
-  records = [lookup(lookup(aws_instance.instances,each.key,null),"private key",null)]
+  records = [lookup(lookup(aws_instance.instances, each.key, null),"private key", null)]
 }
 
 
