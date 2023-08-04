@@ -1,5 +1,5 @@
 variable "ami" {
-  default =  "ami-03265a0778a880afb"
+  default = "ami-03265a0778a880afb"
 }
 
 resource "aws_instance" "frontend" {
@@ -11,13 +11,13 @@ resource "aws_instance" "frontend" {
   }
 }
 
-resource "aws_route53_record" "frontend" {
-  zone_id = "Z07380001ED1GOXY0KMLD"
-  name    = "frontend-dev.cloudev7.online"
-  type    = "A"
-  ttl     = 30
-  records = [aws_instance.frontend.private_ip]
-}
+#resource "aws_route53_record" "frontend" {
+#  zone_id = "Z07380001ED1GOXY0KMLD"
+#  name    = "frontend-dev.cloudev7.online"
+#  type    = "A"
+#  ttl     = 30
+#  records = [aws_instance.frontend.private_ip]
+#}
 
 #
 #resource "aws_instance" "mongodb" {
