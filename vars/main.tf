@@ -35,7 +35,7 @@ variable "mapsofmass" {
   default = {
     sridhar = {
       collage= "vaagdevi"
-      school = gopikrishna
+      school = " gopi krishna "
   }
     madhu = {
       collage= "zph"
