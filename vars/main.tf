@@ -20,8 +20,8 @@
 # mapping variable ------------------
 variable "students_m" {
   default = {
-    sridhar = student
-    vish    = employee
+    sridhar = "student"
+    vish    = "employee"
   }
 }
 
