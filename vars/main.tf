@@ -14,7 +14,7 @@ variable "students__m" {
   "vish" ]
 }
 output "name_of__student" {
-  value = var.students[1]
+  value = var.students__m[1]
 }
 
 # mapping variable ------------------
