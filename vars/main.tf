@@ -7,9 +7,11 @@ output "name_of_student" {
 }
 
 variable "students__m" {
-  default = [ "sridhar" , "vish" ]
+  default = [
+  "sridhar" ,
+  "vish" ]
 }
 output "name_of__student" {
-  value = var.students__m
+  value = var.students__m[1]
 }
 
