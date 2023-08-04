@@ -1,8 +1,8 @@
 variable  "components" {
   default = {
-    frontend    = "frontend-dev"
-    mongodb     = "mongodb-dev"
-    catalogue   = "catalogue-dev"
+    frontend    = {name = "frontens-dev"}
+    mongodb     = {name = "mongodb-dev"}
+    catalogue   =  "catalogue-dev"
 #      redis     = {name = "redis-dev"}
 #      user      = {name = "user-dev"}
 #      cart      = {name = "cart-dev"}
