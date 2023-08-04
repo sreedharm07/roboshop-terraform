@@ -3,5 +3,5 @@ variable "students" {
 }
 
 output "name_of_student" {
-  value = "var.students"
+  value = var.students
 }
