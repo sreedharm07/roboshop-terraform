@@ -25,5 +25,5 @@ variable "mapsofmaps" {
 }
 
 output "test" {
-  value = var.mapsofmaps["sridhar"].crh
+  value = var.mapsofmaps["sridhar"].nveen
 }
