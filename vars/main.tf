@@ -1,5 +1,5 @@
 variable "students" {
-  default = sridhar
+  default = 100
 }
 
 output "name_of_student" {
