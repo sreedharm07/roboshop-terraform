@@ -1,17 +1,18 @@
 variable  "components" {
-  frontend  = {name = "frontend-dev"}
-  mongodb   = {name = "mongodb-dev"}
-  catalogue = {name = "catalogue-dev"}
-#  redis     = {}
-#  user      = {}
-#  cart      = {}
-#  mysql     = {}
-#  shipping  = {}
-#  rabbitmq  = {}
-#  payment   = {}
-#  dispatch  = {}
+  default = {
+    frontend  = {}
+    mongodb   = {}
+    catalogue = {}
+    #  redis     = {}
+    #  user      = {}
+    #  cart      = {}
+    #  mysql     = {}
+    #  shipping  = {}
+    #  rabbitmq  = {}
+    #  payment   = {}
+    #  dispatch  = {}
+  }
 }
-
 resource "aws_instance" "instances" {
   ami           = "ami-0bb6af715826253bf"
   instance_type = "t3.micro"
