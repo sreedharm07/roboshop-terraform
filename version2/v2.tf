@@ -24,13 +24,14 @@ tags = {
   }
 }
 
-#
-#resource "aws_route53_record" "www" {
-#  zone_id = aws_route53_zone.primary.zone_id
-#  name    = "www.example.com"
-#  type    = "A"
-#  ttl     = 300
-#  records = [aws_eip.lb.public_ip]
-#}
+
+resource "aws_route53_record" "records" {
+  for_each =  var.components
+  zone_id = aws_route53_zon
+  name    = "${lookup(each.value,"name", null)}.cloudev7.online"
+  type    = "A"
+  ttl     = 30
+  records = [lookup(lookup(aws_instance,instances,null),"private key",null)]
+}
 
 
