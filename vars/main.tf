@@ -7,7 +7,7 @@ output "name_of_student" {
 }
 
 
-output "name_of_student" {
+output "name_of__student" {
   value = var.students
 }
 
