@@ -1,21 +1,21 @@
-## plan variable-----------------------
-#variable "students" {
-#  default = "sridhar"
-#}
-#
-#output "name_of_student" {
-#  value = var.students
-#}
-#
-## list variables ---------------------
-#variable "students__m" {
-#  default = [
-#  "sridhar" ,
-#  "vish" ]
-#}
-#output "name_of__student" {
-#  value = var.students[1]
-#}
+# plan variable-----------------------
+variable "students" {
+  default = "sridhar"
+}
+
+output "name_of_student" {
+  value = var.students
+}
+
+# list variables ---------------------
+variable "students__m" {
+  default = [
+  "sridhar" ,
+  "vish" ]
+}
+output "name_of__student" {
+  value = var.students[1]
+}
 
 # mapping variable ------------------
 variable "students_m" {
@@ -26,5 +26,5 @@ variable "students_m" {
 }
 
 output "type_of_job" {
-  value = var.students_m["vish"]
+  value = var.students_m["sridha"]
 }
