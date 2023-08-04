@@ -25,5 +25,5 @@ variable "mapsofmaps" {
 }
 
 output "test" {
-  value = "prmm= ${var.mapsofmaps[sridhar].crh}-here"
+  value = "prmm= ${var.mapsofmaps["sridhar"].crh}-here"
 }
