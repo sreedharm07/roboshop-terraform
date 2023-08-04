@@ -1,30 +1,50 @@
-# plan variable-----------------------
-variable "students" {
-  default = "sridhar"
-}
+## plan variable----------------------------------------
+#variable "students" {
+#  default = "sridhar"
+#}
+#
+#output "name_of_student" {
+#  value = var.students
+#}
+#
+## list variables ---------------------------------------
+#variable "students__m" {
+#  default = [
+#  "sridhar" ,
+#  "vish" ]
+#}
+#output "name_of__student" {
+#  value = var.students__m[1]
+#}
+#
+## mapping variable --------------------------------------
+#variable "students_m" {
+#  default = {
+#    sridhar = "student"
+#    vish    = "employee"
+#  }
+#}
+#
+#output "type_of_job" {
+#  value = var.students_m["sridhar"]
+#}
 
-output "name_of_student" {
-  value = var.students
-}
+#maps of mpas ------------------------------------------
 
-# list variables ---------------------
-variable "students__m" {
-  default = [
-  "sridhar" ,
-  "vish" ]
-}
-output "name_of__student" {
-  value = var.students__m[1]
-}
-
-# mapping variable ------------------
-variable "students_m" {
+variable "mapsofmass" {
   default = {
-    sridhar = "student"
-    vish    = "employee"
+    sridhar = {
+      collage= "vaagdevi"
+      school = "gopi krishna"
+  }
+    madhu = {
+      collage= "zph"
+      school= "zpphs"
+    }
   }
 }
 
-output "type_of_job" {
-  value = var.students_m["sridhar"]
+output "details" {
+  value = var.mapsofmass
 }
+
