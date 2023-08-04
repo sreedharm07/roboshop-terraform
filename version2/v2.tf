@@ -34,4 +34,3 @@ tags = {
 #  records = [lookup(lookup(aws_instance.instances, each.key, null),"private_ip", null)]
 #}
 #
-
