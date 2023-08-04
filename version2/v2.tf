@@ -3,14 +3,14 @@ variable  "components" {
     frontend  = {name = "frontend-dev"}
     mongodb   = {name = "mongodb-dev"}
     catalogue = {name = "catalogue-dev"}
-      redis     = {}
-      user      = {}
-      cart      = {}
-      mysql     = {}
-      shipping  = {}
-      rabbitmq  = {}
-      payment   = {}
-      dispatch  = {}
+      redis     = {name = "redis-dev"}
+      user      = {name = "user-dev"}
+      cart      = {name = "cart-dev"}
+      mysql     = {name = "mysql-dev"}
+      shipping  = {name = "shipping-dev"}
+      rabbitmq  = {name = "rabbitmq-dev"}
+      payment   = {name = "payment-dev"}
+      dispatch  = {name = "dispatch-dev"}
   }
 }
 resource "aws_instance" "instances" {
