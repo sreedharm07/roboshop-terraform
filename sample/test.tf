@@ -8,7 +8,7 @@
 
 variable "maps" {
   default = {
-    sridhar = "man"   vish = "women"
+    sridhar = "man" ,  vish = "women"
   }
 }
 
