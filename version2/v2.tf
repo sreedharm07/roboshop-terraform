@@ -1,7 +1,7 @@
-variable "components" {
-  frontend  = {}
-  mongodb   = {}
-  catalogue = {}
+variable  "components" {
+  frontend  = {name = "frontend-dev"}
+  mongodb   = {name = "mongodb-dev"}
+  catalogue = {name = "catalogue-dev"}
 #  redis     = {}
 #  user      = {}
 #  cart      = {}
