@@ -26,5 +26,5 @@ variable "students_m" {
 }
 
 output "type_of_job" {
-  value = var.students_m["sridha"]
+  value = var.students_m["sridhar"]
 }
