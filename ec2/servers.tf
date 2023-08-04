@@ -3,7 +3,7 @@ variable "ami" {
 }
 
 resource "aws_instance" "frontend" {
-  ami           = var.ami
+  ami           = "var.ami"
   instance_type = "t3.small"
   vpc_security_group_ids = ["sg-03c71c5d008981a14"]
   tags = {
