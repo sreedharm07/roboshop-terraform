@@ -1,5 +1,5 @@
 variable "ami" {
-  default =  ami-03265a0778a880afb
+  default =  "ami-03265a0778a880afb"
 }
 
 resource "aws_instance" "frontend" {
