@@ -6,12 +6,24 @@
 #  default = [100, 200]
 #}
 
-variable "maps" {
+#variable "maps" {
+#  default = {
+#    sridhar = "man"
+#    vish = "women"
+#  }
+#}
+#
+#output "output" {
+#  value = var.maps
+#}
+
+variable "mapsofmaps" {
   default = {
-    sridhar = "man" ,  vish = "women"
+    sridhar = {n_name = "sree" , crh = "vandi"}
+    nveen = {n_name = "ok" }
   }
 }
 
-output "output" {
-  value = var.maps
+output "test" {
+  value = var.mapsofmaps["sridhar"].crh
 }
