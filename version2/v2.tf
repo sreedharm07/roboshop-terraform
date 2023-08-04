@@ -27,7 +27,7 @@ tags = {
 
 resource "aws_route53_record" "records" {
   for_each =  var.components
-  zone_id = aws_route53_zon
+  zone_id =  "Z07380001ED1GOXY0KMLD"
   name    = "${lookup(each.value,"name", null)}.cloudev7.online"
   type    = "A"
   ttl     = 30
