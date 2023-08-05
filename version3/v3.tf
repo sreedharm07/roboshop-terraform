@@ -1,6 +1,6 @@
 module "test" {
   source = "./modules"
-  instance_type = var.instance_type
+#  instance_type = var.instance_type
 }
 
 
