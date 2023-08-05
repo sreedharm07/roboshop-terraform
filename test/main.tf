@@ -1,0 +1,4 @@
+module "servers" {
+  source = "./sample"
+}
+
