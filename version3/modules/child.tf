@@ -1,20 +1,20 @@
 data "aws_ami" "example" {
   name_regex       = "Centos-8-DevOps-Practice"
-  owners           = [973714476881]
+  owners           = [ 973714476881 ]
 }
 
 output "test" {
   value = data.aws_ami.example
 }
 
-#resource "aws_instance" "instance" {
-#  ami           = data.aws_ami
-#  instance_type = var.instance_type
-#
-#  tags = {
-#    Name = "frontend"
-#  }
-#}
+resource "aws_instance" "instance" {
+  ami           = data.aws_ami.example.id
+  instance_type = var.instance_type
+
+  tags = {
+    Name = "frontend"
+  }
+}
 #
 #output "front" {
 #  value = aws_instance.instance
@@ -28,5 +28,5 @@ output "test" {
 ##  records = []
 ##}
 #
-#variable "instance_type" {}
+variable "instance_type" {}
 #variable "components" {}
