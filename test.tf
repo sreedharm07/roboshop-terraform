@@ -13,6 +13,6 @@ resource "aws_instance" "instance" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = each.value
+    Name = each.key
   }
 }
