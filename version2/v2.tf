@@ -2,15 +2,15 @@ variable  "components" {
   default = {
     frontene    = {name = "frontens-dev"}
     mongodb     = {name = "mongodb-dev"}
-    catalogue   =  "catalogue-dev"
-#      redis     = {name = "redis-dev"}
-#      user      = {name = "user-dev"}
-#      cart      = {name = "cart-dev"}
-#      mysql     = {name = "mysql-dev"}
-#      shipping  = {name = "shipping-dev"}
-#      rabbitmq  = {name = "rabbitmq-dev"}
-#      payment   = {name = "payment-dev"}
-#      dispatch  = {name = "dispatch-dev"}
+    catalogue   = {name = "catalogue-dev"}
+      redis     = {name = "redis-dev"}
+      user      = {name = "user-dev"}
+      cart      = {name = "cart-dev"}
+      mysql     = {name = "mysql-dev"}
+      shipping  = {name = "shipping-dev"}
+      rabbitmq  = {name = "rabbitmq-dev"}
+      payment   = {name = "payment-dev"}
+      dispatch  = {name = "dispatch-dev"}
   }
 }
 resource "aws_instance" "instances" {
@@ -25,13 +25,13 @@ tags = {
   }
 }
 
-#
-#resource "aws_route53_record" "records" {
-#  for_each =  var.components
-#  zone_id =  "Z07380001ED1GOXY0KMLD"
-#  name    = "${lookup(each.value,"name", null)}.cloudev7.online"
-#  type    = "A"
-#  ttl     = 30
-#  records = [lookup(lookup(aws_instance.instances, each.key, null),"private_ip", null)]
-#}
-#
+
+resource "aws_route53_record" "records" {
+  for_each =  var.components
+  zone_id =  "Z07380001ED1GOXY0KMLD"
+  name    = "${lookup(each.value,"name", null)}.cloudev7.online"
+  type    = "A"
+  ttl     = 30
+  records = [lookup(lookup(aws_instance.instances, each.key, null),"private_ip", null)]
+}
+
