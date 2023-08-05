@@ -3,7 +3,9 @@ module "test" {
 #  instance_type = var.instance_type
 }
 
-
+output "test" {
+  value = "data.aws_ami.example"
+}
 
 
 variable "instance_type" {
