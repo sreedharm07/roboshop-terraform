@@ -4,7 +4,7 @@
 
 
 data "aws_ami" "example" {
-  name_regex       = "devops-practice"
+  name_regex       = "Centos-8-DevOps-Practice"
 }
 
 output "testing" {

@@ -1,6 +1,6 @@
-data "aws_ami" "example" {
-  name_regex       = "devops-practice"
-  }
+#data "aws_ami" "example" {
+#  name_regex       = "devops-practice"
+#  }
 
 
 
