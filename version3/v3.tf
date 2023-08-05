@@ -4,7 +4,7 @@ module "test" {
 }
 
 output "test" {
-  value = data.aws_ami
+  value = module.test
 }
 
 #

@@ -3,6 +3,9 @@ data "aws_ami" "example" {
   owners           = [973714476881]
 }
 
+output "test" {
+  value = data.aws_ami.example
+}
 
 #resource "aws_instance" "instance" {
 #  ami           = data.aws_ami
