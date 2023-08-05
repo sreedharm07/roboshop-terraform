@@ -1,6 +1,6 @@
 variable "components" {
   default = {
-    frontend = {name= "frontend-devd"}
+    frontend = {name= "frontend-dev"}
     mongodb = {name="mongodb-dev"}
     catalogue = {name="catalogue-dev"}
     redis = {name="redis-dev"}
