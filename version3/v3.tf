@@ -8,5 +8,5 @@ data "aws_ami" "example" {
 }
 
 output "testing" {
-  value = aws_ami
+  value = "aws_ami"
 }
