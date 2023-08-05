@@ -9,5 +9,5 @@ data "aws_ami" "example" {
 }
 
 output "testing" {
-  value =  data.aws_ami.example["id"]
+  value =  data.aws_ami.example
 }
