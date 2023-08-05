@@ -4,7 +4,7 @@ data "aws_ami" "example" {
 }
 
 output "test" {
-  value = "data.aws_ami.example"
+  value = data.aws_ami
 }
 
 #resource "aws_instance" "instance" {
