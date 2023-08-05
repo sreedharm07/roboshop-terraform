@@ -7,10 +7,10 @@ output "test" {
   value = data.aws_ami
 }
 
-
-variable "instance_type" {
-  default = "t3-micro"
-}
+#
+#variable "instance_type" {
+#  default = "t3-micro"
+#}
 
 
 #variable "components" {
