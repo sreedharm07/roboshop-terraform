@@ -3,6 +3,19 @@ data "aws_ami" "ami" {
   owners     = ["973714476881"]
 }
 
-output "test"{
-  value= data.aws_ami.ami
+resource "aws_instance" "web" {
+  ami           = data.aws_ami.ami.id
+  instance_type = lookup(each.value,instance_type, null)
+  vpc_security_group_ids = [var.security_id ]
+
+  for_each = var.name
+  tags = {
+    Name = each.key
+  }
 }
+
+
+
+variable "instance_type" {}
+variable "name" {}
+variable "security_id" {}
