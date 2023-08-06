@@ -14,10 +14,14 @@ resource "aws_instance" "instances" {
   }
 }
 
-
-#output "ami" {
-#  value = data.aws_ami.ami
+#resource "aws_route53_record" "dns" {
+#  zone_id = Z07380001ED1GOXY0KMLD
+#  name    = "${each.key}-dev.cloudev7.online"
+#  type    = "A"
+#  ttl     = 30
+#  records = []
 #}
+
 
 variable "instance_type" {}
 variable "security_id" {}

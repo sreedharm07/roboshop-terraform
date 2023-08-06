@@ -5,9 +5,6 @@ instance_type = var.instance_type
   name=var.components
 }
 
-#output "test" {
-#  value = module.servers
-#}
 
 variable "instance_type" {
   default = "t3.micro"
@@ -24,3 +21,4 @@ variable "components" {
     catalogue={name="catalogue"}
   }
 }
+
