@@ -4,9 +4,10 @@ data "aws_ami" "ami" {
   }
 
 resource "aws_instance" "instances" {
+  for_each = var.name
   ami                    = data.aws_ami.ami.id
   instance_type          = var.instance_type
-  vpc_security_group_ids = [var.sec_id]
+  vpc_security_group_ids = [var.security_id]
 
 }
 
@@ -15,4 +16,5 @@ resource "aws_instance" "instances" {
 #}
 
 variable "instance_type" {}
-variable "sec_id" {}
+variable "security_id" {}
+variable "name" {}
