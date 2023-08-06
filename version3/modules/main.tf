@@ -1,6 +1,6 @@
 resource "aws_instance" "instances" {
   ami                    = data.aws_ami.ami.id
-  instance_type          = var.instance_type
+  instance_type          = var.name["instance_type"]
   vpc_security_group_ids = [var.security_id]
 
   tags = {
