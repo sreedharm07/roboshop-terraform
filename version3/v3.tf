@@ -9,10 +9,10 @@ output "test" {
 }
 
 variable "instance_type" {
-  instance_type = "t3.micro"
+  default = "t3.micro"
 }
 
 variable "id" {
- security_group =  "sg-03c71c5d008981a14"
+ default =  "sg-03c71c5d008981a14"
 }
 
