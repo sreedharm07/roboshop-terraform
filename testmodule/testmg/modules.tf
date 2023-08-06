@@ -5,7 +5,7 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ami.id
-  instance_type = lookup(each.value,instance_type, null)
+  instance_type = lookup(each.value,["instance_type"], null)
   vpc_security_group_ids = [var.security_id ]
 
   for_each = var.name
