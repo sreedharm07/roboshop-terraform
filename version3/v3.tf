@@ -19,8 +19,8 @@ variable "id" {
 
 variable "components" {
   default = {
-    frontend={name=frontend}
-    mongodb={name=mongodb}
-    catalogue={name=catalogue}
+    frontend={name="frontend"}
+    mongodb={name="mongodb"}
+    catalogue={name="catalogue"}
   }
 }
