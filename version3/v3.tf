@@ -4,5 +4,5 @@ module "servers" {
 }
 
 output "test" {
-  value = module.servers
+  value = module.servers.ami
 }
