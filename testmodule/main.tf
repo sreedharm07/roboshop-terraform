@@ -1,7 +1,7 @@
-module "testmg" {
-  source = "./modules"
+module "servers" {
+  source = "./testmg"
 }
 
 output "testmg" {
-  value = module.testmg.ami
+  value = module.servers.test
 }
