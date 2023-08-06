@@ -2,7 +2,7 @@ module "servers" {
   source = "./testmg"
 
 #  for_each = var.name
-  instance_type = lookup(var.name,"instance_type" null )
+  instance_type = lookup(var.name,"instance_type",null)
   name = var.name
   security_id = var.security
 }
