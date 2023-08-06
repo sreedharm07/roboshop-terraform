@@ -9,7 +9,11 @@ resource "aws_instance" "instances" {
   instance_type          = var.instance_type
   vpc_security_group_ids = [var.security_id]
 
+  tags = {
+    Name = each.key
+  }
 }
+
 
 #output "ami" {
 #  value = data.aws_ami.ami

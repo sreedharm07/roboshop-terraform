@@ -19,12 +19,11 @@ resource "aws_instance" "instances" {
   vpc_security_group_ids = ["sg-03c71c5d008981a14" ]
 
   for_each= var.components
-tags = {
+  tags = {
     Name = each.key
-#   lookup(each.value,"name", null )
+    #   lookup(each.value,"name", null )
   }
 }
-
 
 resource "aws_route53_record" "records" {
   for_each =  var.components
