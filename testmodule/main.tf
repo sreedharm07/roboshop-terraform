@@ -2,8 +2,8 @@ module "servers" {
   source = "./testmg"
 
 #  for_each = var.name
-  instance_type = var.name
-  name = var.name
+  instance_type = var.name["frontend"].instance_type
+  name =  var.name
   security_id = var.security
 }
 
