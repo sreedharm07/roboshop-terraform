@@ -10,9 +10,9 @@ resource "aws_instance" "instances" {
 
 }
 
-output "ami" {
-  value = data.aws_ami.ami
-}
+#output "ami" {
+#  value = data.aws_ami.ami
+#}
 
 variable "instance_type" {}
 variable "sec_id" {}

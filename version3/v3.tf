@@ -4,9 +4,9 @@ instance_type = var.instance_type
  sec_id= var.id
 }
 
-output "test" {
-  value = module.servers
-}
+#output "test" {
+#  value = module.servers
+#}
 
 variable "instance_type" {
   default = "t3.micro"
