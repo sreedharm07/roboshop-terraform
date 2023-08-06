@@ -3,5 +3,6 @@ module "servers" {
  security_id= var.id
   name= each.value["name"]
   for_each = var.components
+  instance_type = var.components["instance_type"]
 }
 
