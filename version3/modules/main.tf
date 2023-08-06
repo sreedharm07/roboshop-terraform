@@ -9,7 +9,7 @@ resource "aws_instance" "instances" {
 }
 
 resource "aws_route53_record" "dns" {
-  zone_id = Z07380001ED1GOXY0KMLD
+  zone_id = "Z07380001ED1GOXY0KMLD"
   name    = "${var.name}-dev.cloudev7.online"
   type    = "A"
   ttl     = 30
