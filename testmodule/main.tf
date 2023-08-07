@@ -12,7 +12,7 @@ variable "name" {
   default = {
     frontend = {
       name          = "frontend"
-      instance_type = "t2.micro"
+      instance_type = "t1.micro"
     }
     mongodb = {
       name          = "mongodb"
