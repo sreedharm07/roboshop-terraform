@@ -23,7 +23,7 @@ resource "null_resource" "ansible" {
     aws_route53_record.dns
   ]
 
-  provisioner "local-exec" {
+  provisioner "local-exec"  {
     command = <<EOF
     cd /home/centos/roboshop-ansible
     git pull
