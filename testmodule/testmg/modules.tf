@@ -19,7 +19,9 @@ resource "aws_route53_record" "dns" {
 }
 
 resource "null_resource" "ansible" {
-  depends_on = [aws_route53_record.dns]
+  depends_on = [
+    aws_route53_record.dns
+  ]
 
   provisioner "local-exec" {
     command = <<eof
