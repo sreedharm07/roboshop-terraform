@@ -50,3 +50,7 @@ variable "name" {
 variable "security" {
   default = "sg-03c71c5d008981a14"
 }
+
+variable "record" {
+  default = "Z07380001ED1GOXY0KMLD"
+}

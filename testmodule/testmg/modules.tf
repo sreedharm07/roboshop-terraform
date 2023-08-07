@@ -16,11 +16,15 @@ resource "aws_route53_record" "dns" {
   type         = "A"
   ttl          = 30
   records      = [aws_instance.web.private_ip ]
-  provisioner "local-exec" {
-    command = "sleep 30"
-  }
-}
 
-variable "record" {
-  default = "Z07380001ED1GOXY0KMLD"
+
+  provisioner "local-exec" {
+    command = <<eof
+    cd /home/centos/roboshop-ansible
+    git pull
+    ansible-playbook -i "${var.name}-dev.cloudev7.online", main.yml -e ansible_user=centos -e ansible_user=DevOps321 -e component= var.name
+
+eof
+  }
+
 }
