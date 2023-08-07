@@ -11,20 +11,23 @@ resource "aws_instance" "web" {
 
 
 resource "aws_route53_record" "dns" {
-  zone_id      = var.record
-  name         = "${var.name}-dev.cloudev7.online"
-  type         = "A"
-  ttl          = 30
-  records      = [aws_instance.web.private_ip ]
+  zone_id = var.record
+  name    = "${var.name}-dev.cloudev7.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.web.private_ip]
+}
 
+resource "null_resource" "ansible" {
+  depends_on = [aws_route53_record.dns]
 
   provisioner "local-exec" {
     command = <<eof
     cd /home/centos/roboshop-ansible
     git pull
+    sleep 30
     ansible-playbook -i "${var.name}-dev.cloudev7.online", main.yml -e ansible_user=centos -e ansible_user=DevOps321 -e component= var.name
 
 eof
   }
-
 }
