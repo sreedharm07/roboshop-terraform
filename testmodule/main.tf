@@ -10,11 +10,11 @@ module "servers" {
 
 variable "name" {
   default = {
-    frontendd={
+    frontend = {
       name          = "frontend"
       instance_type = "t2.micro"
     }
-    mongodbd= {
+    mongodb = {
       name          = "mongodb"
       instance_type = "t1.micro"
     }
