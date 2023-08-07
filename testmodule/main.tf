@@ -1,21 +1,22 @@
 module "servers" {
   source = "./testmg"
 
-#  for_each = var.name
-  instance_type = var.name
-  name =  var.name
+  for_each = var.name
+
+  instance_type = each.value["instance_type"]
+  name =  each.value["name"]
   security_id = var.security
 }
 
 variable "name" {
   default = {
     frontend = {
-      name          = "frontend-dev"
-      instance_type = "t3.micro"
+      name          = "frontend"
+      instance_type = "t2.micro"
     }
     mongodb = {
-      name          = "mongodb-dev"
-      instance_type = "t2.micro"
+      name          = "mongodb"
+      instance_type = "t1.micro"
     }
   }
 }

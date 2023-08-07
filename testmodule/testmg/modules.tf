@@ -5,12 +5,11 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ami.id
-  instance_type = each.value["instance_type"]
+  instance_type = var.instance_type
   vpc_security_group_ids = [var.security_id ]
 
-  for_each = var.name
   tags = {
-    Name = each.value["name"]
+    Name = var.name
   }
 }
 
