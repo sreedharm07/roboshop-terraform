@@ -6,10 +6,6 @@ resource "aws_instance" "web" {
   tags = {
     Name  = var.name
   }
-
-  provisioner "local-exec" {
-    command = "sleep 30"
-  }
 }
 
 
@@ -20,6 +16,9 @@ resource "aws_route53_record" "dns" {
   type         = "A"
   ttl          = 30
   records      = [aws_instance.web.private_ip ]
+  provisioner "local-exec" {
+    command = "sleep 30"
+  }
 }
 
 variable "record" {
