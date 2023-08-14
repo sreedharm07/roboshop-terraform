@@ -5,5 +5,5 @@ data "aws_ami" "ami" {
 }
 
 output "ami" {
-  value = aws_ami
+  value = "aws_ami"
 }
