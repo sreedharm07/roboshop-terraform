@@ -5,7 +5,7 @@ data "aws_ami" "ami" {
 
 
 resource "aws_instance" "instance" {
-  ami           = data.aws_ami.ami
+  ami           = data.aws_ami
   instance_type = "t3.micro"
 
   tags = {
