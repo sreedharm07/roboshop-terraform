@@ -3,6 +3,12 @@ data "aws_ami" "ami" {
   owners           = [973714476881]
 }
 
-output "test" {
-  value = data.aws_ami.ami
+
+resource "aws_instance" "instance" {
+  ami           = data.aws_ami.ami
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "frontend"
+  }
 }
