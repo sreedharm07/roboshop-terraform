@@ -17,7 +17,7 @@ variable "security_group" {
 }
 
 variable "instance_type" {
-  default = "t2-micro"
+  default = "t2.micro"
 }
 
 variable "zone_id" {
