@@ -18,6 +18,6 @@ resource "aws_instance" "instance" {
   for_each = var.components
 
   tags = {
-    Name = each.value
+    Name = each.value["name"]
   }
 }
