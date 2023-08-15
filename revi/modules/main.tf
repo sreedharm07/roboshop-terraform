@@ -12,6 +12,6 @@ resource "aws_instance" "instances" {
 resource "aws_route53_record" "records" {
   name    = "${var.components}-dev"
   type    = "A"
-  ttl     = 30
+  ttl     = "30"
   zone_id = var.zone_id
 }
