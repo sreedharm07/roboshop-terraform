@@ -11,7 +11,7 @@ data "aws_ami" "ami" {
 }
 
 resource "aws_instance" "instance" {
-  ami           = data.aws_ami.ami
+  ami           = data.aws_ami.ami.id
   instance_type = "t3.micro"
   vpc_security_group_ids = ["sg-03c71c5d008981a14"]
   for_each = var.components
