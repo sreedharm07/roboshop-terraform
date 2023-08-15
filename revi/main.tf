@@ -10,8 +10,8 @@ variable "zone_id" {
 variable "components" {
   default = {
     frontend= {name="frontend"}
-    mongodb= {name="mongodb"}
-    catalogue={name="catalogue"}
+#    mongodb= {name="mongodb"}
+#    catalogue={name="catalogue"}
   }
 }
 
