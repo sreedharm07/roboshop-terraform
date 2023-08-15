@@ -1,5 +1,5 @@
 variable "components" {
- default = [frontend, mongodb,catalogue]
+ default = ["frontend", "mongodb","catalogue"]
 }
 
 data "aws_ami" "ami" {
