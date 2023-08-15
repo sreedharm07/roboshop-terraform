@@ -18,9 +18,9 @@ resource "aws_route53_record" "records" {
 }
 
 resource "null_resource" "ansible" {
+  depends_on=[ aws_route53_record.records ]
+
   provisioner "local-exec" {
-    depends_on=[
-    aws_route53_record.records ]
     command = <<EOF
 cd /home/centos/roboshop-terraform/revi/learn-ansible
 git pull
