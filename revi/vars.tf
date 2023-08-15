@@ -1,13 +1,37 @@
 variable "components" {
   default = {
-    frontend={
-      name="frontend"
+    frontend = {
+      name = "frontend"
     }
-    mongodb={
-      name="mongodb"
+    mongodb = {
+      name = "mongodb"
     }
-    catalogue={
-      name="catalogue"
+    catalogue = {
+      name = "catalogue"
+    }
+    redis = {
+      name = "redis"
+    }
+    user = {
+      name = "user"
+    }
+    cart = {
+      name = "cart"
+    }
+    mysql = {
+      name = "mysql"
+    }
+    rabbitmq = {
+      name = "rabbitmq"
+    }
+    shipping = {
+      name = "shipping"
+    }
+    payment = {
+      name = "payment"
+    }
+    dispatch = {
+      name = "dispatch"
     }
   }
 }
