@@ -37,7 +37,7 @@ resource "aws_route53_record" "record" {
   name    ="frontend"
   type    = "A"
   ttl     = 30
-  records = [ aws_instance.instances.private_ip ]
+  records = [ aws_instance.instances[each.key].private_ip ]
 }
 
 output "test" {
