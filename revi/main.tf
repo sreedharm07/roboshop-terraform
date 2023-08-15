@@ -36,5 +36,5 @@ resource "aws_route53_record" "record" {
   name    ="frontend"
   type    = "A"
   ttl     = 30
-  records = aws_instance.instances.private_ip       #[lookup(lookup(aws_instance.instances,each.key,null),private_ip, null)]
+  records = [lookup(aws_instance.instances,each.key,null)]#,private_ip, null)]
 }
