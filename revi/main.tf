@@ -1,10 +1,9 @@
 variable "components" {
  default = {
- frontend={name = "frontend"}
+   user={name="user"}
+   frontend={name = "frontend"}
    mongodb={name= "mongodb"}
    catalogue={name="catalogue"}
-   user={name="user"}
-
  }
 }
 
