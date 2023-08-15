@@ -22,10 +22,10 @@ resource "null_resource" "ansible" {
 
   provisioner "local-exec" {
     command = <<EOF
-cd /home/centos/learn-ansible
-git pull
-sleep 50
-ansible-playbook -i frontend-dev.cloudev7.online", main.yml -i ansible_user=centos -i ansible_password=DevOps321 -i component=frontend
+     cd /home/centos/learn-ansible
+     git pull
+     sleep 50
+ansible-playbook -i "${var.components}.cloudev7.online", main.yml -i ansible_user=centos -i ansible_password=DevOps321 -i component=${var.components}
 EOF
   }
 }
