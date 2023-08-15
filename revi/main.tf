@@ -34,7 +34,7 @@ resource "aws_instance" "instances" {
 resource "aws_route53_record" "record" {
   for_each = var.components
   zone_id = var.zone_id
-  name    ="frontend"
+  name    = each.value[name]
   type    = "A"
   ttl     = 30
   records = [ aws_instance.instances[each.key].private_ip ]
