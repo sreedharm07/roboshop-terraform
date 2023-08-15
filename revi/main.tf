@@ -22,19 +22,24 @@ data "aws_ami" "ami" {
 
 
 resource "aws_instance" "instances" {
-  ami           = data.aws_ami.ami.id
-  instance_type = var.instance_type
+  ami                    = data.aws_ami.ami.id
+  instance_type          = var.instance_type
   vpc_security_group_ids = [var.security_group]
-  for_each = var.components
-  tags = {
+  for_each               = var.components
+  tags                   = {
     Name = each.key
   }
 }
-resource "aws_route53_record" "record" {
-  for_each = var.components
-  zone_id = var.zone_id
-  name    ="frontend"
-  type    = "A"
-  ttl     = 30
-  records = [lookup(lookup(aws_instance.instances,each.key,null),"private_ip",null)]
+#}
+#resource "aws_route53_record" "record" {
+#  for_each = var.components
+#  zone_id = var.zone_id
+#  name    ="frontend"
+#  type    = "A"
+#  ttl     = 30
+#  records = [lookup(lookup(aws_instance.instances,each.key,null),"private_ip",null)]
+#}
+
+output "test" {
+  value = aws_instance.instances
 }
