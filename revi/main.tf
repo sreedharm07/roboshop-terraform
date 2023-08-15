@@ -3,6 +3,8 @@ variable "components" {
  frontend={name = "frontend"}
    mongodb={name= "mongodb"}
    catalogue={name="catalogue"}
+   user={name="user"}
+
  }
 }
 
