@@ -30,16 +30,16 @@ resource "aws_instance" "instances" {
     Name = each.key
   }
 }
-#}
-#resource "aws_route53_record" "record" {
-#  for_each = var.components
-#  zone_id = var.zone_id
-#  name    ="frontend"
-#  type    = "A"
-#  ttl     = 30
-#  records = [lookup(lookup(aws_instance.instances,each.key,null),"private_ip",null)]
-#}
 
-output "test" {
-  value = aws_instance.instances
+resource "aws_route53_record" "record" {
+  for_each = var.components
+  zone_id = var.zone_id
+  name    ="frontend"
+  type    = "A"
+  ttl     = 30
+  records = [ lookup(aws_instance.instances,each.value["private_ip"], null)]
 }
+
+#output "test" {
+#  value = aws_instance.instances
+#}
