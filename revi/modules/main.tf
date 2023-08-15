@@ -18,15 +18,14 @@ resource "aws_route53_record" "records" {
 }
 
 resource "null_resource" "ansible" {
-  depends_on=[ aws_route53_record.records ]
+  depends_on= [ aws_route53_record.records ]
 
   provisioner "local-exec" {
     command = <<EOF
-cd /home/centos/roboshop-terraform/revi/learn-ansible
+cd /home/centos/learn-ansible
 git pull
 sleep 50
 ansible-playbook -i "${var.components}-dev.cloudev.online", main.yml -i ansible_user=centos -i ansible_password=DevOps321 -i var.components
-
 EOF
   }
 }
