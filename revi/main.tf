@@ -2,6 +2,7 @@ variable "components" {
  default = {
    name = "frontend"
    name= "mongodb"
+   name="catalogue"
  }
 }
 
