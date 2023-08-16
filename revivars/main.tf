@@ -1,6 +1,6 @@
 module "servers" {
 
-  source          = "git::https://github.com/sreedharm07/roboshop-terraform.git/revi/modules"
+  source          = "./revi/modules"
 
   components      = each.value["name"]
   security_group  = var.security_group
