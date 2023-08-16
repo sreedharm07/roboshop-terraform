@@ -1,6 +1,6 @@
 module "servers" {
 
-  source          = "./revi/modules"
+  source          = "./modules"
 
   components      = each.value["name"]
   security_group  = var.security_group
