@@ -1,5 +1,5 @@
 resource "aws_instance" "instance" {
-    ami           = data.aws_ami.ami
+    ami           = data.aws_ami.ami.id
     instance_type = "t3.micro"
     security_groups= ["sg-03c71c5d008981a14"]
 
