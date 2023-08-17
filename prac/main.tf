@@ -1,7 +1,7 @@
 module "resourse" {
   source = "./module"
   for_each = var.components
-  components = each.key["name"]
+  components = each.key
 }
 
 
