@@ -1,10 +1,8 @@
-components={
-  frontend={
-    name="frontend"
+components= {
+  frontend = {
+    name = "frontend"
   }
-  mongodb={
-    name="mongodb"
+  mongodb = {
+    name = "mongodb"
   }
 }
-
-instance_type ="t3.micro"
