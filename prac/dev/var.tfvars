@@ -6,5 +6,3 @@ components= {
     name = "mongodb"
   }
 }
-
-instance_type="t3.micro"
